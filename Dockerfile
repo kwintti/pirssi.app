@@ -11,5 +11,5 @@ FROM scratch
 WORKDIR /app
 COPY --from=builder /app/app .
 COPY static ./static
-EXPOSE 80
+EXPOSE 8080
 CMD ["./app"]

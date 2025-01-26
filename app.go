@@ -8,10 +8,10 @@ import (
 
 func main(){
     //fileServer := http.FileServer(http.Dir("./static"))
-    fmt.Println("Serving on: 80")
+    fmt.Println("Serving on: 8080")
     //http.Handle("/", fileServer)
     http.HandleFunc("/", page)
-    log.Fatal(http.ListenAndServe(":80", nil))
+    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func page(w http.ResponseWriter, r *http.Request){
