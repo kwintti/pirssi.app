@@ -1,5 +1,4 @@
 .env
 .kamal
-Dockerfile
 app
 config/
