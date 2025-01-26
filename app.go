@@ -7,13 +7,8 @@ import (
 )
 
 func main(){
-    //fileServer := http.FileServer(http.Dir("./static"))
+    fileServer := http.FileServer(http.Dir("./static"))
     fmt.Println("Serving on: 8080")
-    //http.Handle("/", fileServer)
-    http.HandleFunc("/", page)
+    http.Handle("/", fileServer)
     log.Fatal(http.ListenAndServe(":8080", nil))
-}
-
-func page(w http.ResponseWriter, r *http.Request){
-    fmt.Fprintf(w, "<html><body><h1>Hello!</h1></body></html>")
 }
